@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    6666
+    <script>
+        //  深拷贝的所有方法
+        // 深拷贝
+        // 1、遍历赋值
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+
+        // function simpleClone(obj1) {
+        //     var obj2 = {},
+        //     for (var i in obj1) {
+        //         obj2[i] = obj1[i]
+        //     }
+        //     return obj2;
+        // }
+        // var objCopy = simpleClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x = 'worldCopy'
+        // console.log(objCopy)
+
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+
+        // function simpleClone(obj1) {
+        //     var obj2 = {},
+        //     for (var i in obj1) {
+        //         obj2[i] = obj1[i]
+        //     }
+        //     return obj2;
+        // }
+        // var objCopy = simpleClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x = 'worldCopy'
+        // console.log(objCopy)
+
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+
+        // function simpleClone(obj1) {
+        //     var obj2 = {},
+        //     for (var i in obj1) {
+        //         obj2[i] = obj1[i]
+        //     }
+        //     return obj2;
+        // }
+        // var objCopy = simpleClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x = 'worldCopy'
+        // console.log(objCopy)
+
+
+        // 2、Object.creat()--能拷贝到该对象的原型链上的__proto__属性
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+        // var objCopy = Object.create(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'worldCopy'
+        // console.log(objCopy)
+
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+        // var objCopy = Object.create(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'worldCopy'
+        // console.log(objCopy)
+
+        // var obj = {
+        //     a: 'javascript',
+        //     b: {
+        //         x: 'world',
+        //         y: 111
+        //     },
+        //     c: [1, 2, 3]
+        // }
+        // var objCopy = Object.create(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'worldCopy'
+        // console.log(objCopy)
+
+
+        // 浅拷贝
+        // 1、遍历深拷贝
+        // 手写深拷贝
+        // function deepClone(startObj, endObj) {
+        //     if (typeof startObj != 'object' || startObj === null) {
+        //         return obj = startObj
+        //     }
+        //     var obj = endObj || {}
+        //     for (var key in startObj) {
+        //         // 判断key是否startObj 上的属性，不包含原型链
+        //         if (startObj.hasOwnProperty(key)) {
+        //             if (typeof startObj[key] !== 'object' || startObj[key] === null) {
+        //                 obj[key] = startObj[key]
+        //             } else {
+        //                 obj[key] = startObj[key].constructor === Array ? [] : {}
+        //                 deepClone(startObj[key], obj[key])
+        //             }
+        //         }
+        //     }
+        //     return obj
+        // }
+
+        // var objCopy = deepClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'world'
+        // console.log(objCopy)
+
+        // function deepClone(startObj, endObj) {
+        //     if (typeof startObj != 'object' || startObj === null) {
+        //         return obj = startObj
+        //     }
+        //     var obj = endObj || {}
+        //     for (var key in startObj) {
+        //         // 判断key是否startObj 上的属性，不包含原型链
+        //         if (startObj.hasOwnProperty(key)) {
+        //             if (typeof startObj[key] !== 'object' || startObj[key] === null) {
+        //                 obj[key] = startObj[key]
+        //             } else {
+        //                 obj[key] = startObj[key].constructor === Array ? [] : {}
+        //                 deepClone(startObj[key], obj[key])
+        //             }
+        //         }
+        //     }
+        //     return obj
+        // }
+
+        // var objCopy = deepClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'world'
+        // console.log(objCopy)
+
+        // function deepClone(startObj, endObj) {
+        //     if (typeof startObj != 'object' || startObj === null) {
+        //         return obj = startObj
+        //     }
+        //     var obj = endObj || {}
+        //     for (var key in startObj) {
+        //         // 判断key是否startObj 上的属性，不包含原型链
+        //         if (startObj.hasOwnProperty(key)) {
+        //             if (typeof startObj[key] !== 'object' || startObj[key] === null) {
+        //                 obj[key] = startObj[key]
+        //             } else {
+        //                 obj[key] = startObj[key].constructor === Array ? [] : {}
+        //                 deepClone(startObj[key], obj[key])
+        //             }
+        //         }
+        //     }
+        //     return obj
+        // }
+
+        // var objCopy = deepClone(obj);
+        // objCopy.b.x = 'worldCopy'
+        // console.log(obj);    //obj.b.x ==> 'world'
+        // console.log(objCopy)
+
+
+
+
+        // 2、Object.create()做深拷贝--不常用，一般常见于做浅拷贝
+        // 判断startObj的key为数组或对象，不为null
+        // if (typeof startObj[i] !== 'object' || startObj[i] == null) {
+        //     obj[i] = startObj[i];
+        // } else {
+        //     //原理同上，只是通过Object.create()创建一个空对象
+        //     obj[i] = startObj[i].constructor === Array ? [] : Object.create({})
+        //     //回调函数，处理对象中还有引用类型的情况--深度拷贝
+        //     deepClone(startObj[i], obj[i]);
+        // }
+
+        // if (typeof startObj[i] !== 'object' || startObj[i] == null) {
+        //     obj[i] = startObj[i];
+        // } else {
+        //     //原理同上，只是通过Object.create()创建一个空对象
+        //     obj[i] = startObj[i].constructor === Array ? [] : Object.create({})
+        //     //回调函数，处理对象中还有引用类型的情况--深度拷贝
+        //     deepClone(startObj[i], obj[i]);
+        // }
+
+        // if (typeof startObj[i] !== 'object' || startObj[i] == null) {
+        //     obj[i] = startObj[i];
+        // } else {
+        //     //原理同上，只是通过Object.create()创建一个空对象
+        //     obj[i] = startObj[i].constructor === Array ? [] : Object.create({})
+        //     //回调函数，处理对象中还有引用类型的情况--深度拷贝
+        //     deepClone(startObj[i], obj[i]);
+        // }
+
+
+        // 3、JSON.parse()
+        // var objCopy = JSON.parse(JSON.stringify(obj)) //object-->string-->object
+
+        // var objCopy = JSON.parse(JSON.stringify(obj)) //object-->string-->object
+
+        // var objCopy = JSON.parse(JSON.stringify(obj)) //object-->string-->object
+
+
+
+        //4、递归    （自身调用自身）
+        // 使用递归的方式实现数组、对象的深拷贝
+
+        // function deepClone(obj) {
+        //     if (typeof obj !== 'object' || obj == null) {
+        //         return obj
+        //     }
+        //     let result
+        //     if (obj instanceof Array) {
+        //         result = []
+        //     } else {
+        //         result = {}
+        //     }
+        //     for (let key in obj) {
+        //         if (obj.hasOwnProperty(key)) {
+        //             result[key] = deepClone(obj[key])
+        //         }
+        //     }
+        //     return result
+        // }
+        // let obj1 = {
+        //     name: '888'
+        // }
+        // let obj = deepClone(obj1)
+        // obj.name = '666'
+        // // console.log(obj, obj1);
+        // console.log(deepClone(obj1));
+        // console.log(obj);
+
+         // function deepClone(obj) {
+        //     if (typeof obj !== 'object' || obj == null) {
+        //         return obj
+        //     }
+        //     let result
+        //     if (obj instanceof Array) {
+        //         result = []
+        //     } else {
+        //         result = {}
+        //     }
+        //     for (let key in obj) {
+        //         if (obj.hasOwnProperty(key)) {
+        //             result[key] = deepClone(obj[key])
+        //         }
+        //     }
+        //     return result
+        // }
+        // let obj1 = {
+        //     name: '888'
+        // }
+        // let obj = deepClone(obj1)
+        // obj.name = '666'
+        // // console.log(obj, obj1);
+        // console.log(deepClone(obj1));
+        // console.log(obj);
+
+         // function deepClone(obj) {
+        //     if (typeof obj !== 'object' || obj == null) {
+        //         return obj
+        //     }
+        //     let result
+        //     if (obj instanceof Array) {
+        //         result = []
+        //     } else {
+        //         result = {}
+        //     }
+        //     for (let key in obj) {
+        //         if (obj.hasOwnProperty(key)) {
+        //             result[key] = deepClone(obj[key])
+        //         }
+        //     }
+        //     return result
+        // }
+        // let obj1 = {
+        //     name: '888'
+        // }
+        // let obj = deepClone(obj1)
+        // obj.name = '666'
+        // // console.log(obj, obj1);
+        // console.log(deepClone(obj1));
+        // console.log(obj);
+
+
+        // for...in...
+        // function deepCopy1(obj) {
+        //     let o = {}
+        //     for (let key in obj) {
+        //         o[key] = obj[key]
+        //     }
+        //     return o
+        // }
+
+        // let obj = {
+        //     a: 1,
+        //     b: undefined,
+        //     c: function () { },
+        // }
+        // console.log(deepCopy1(obj))
+
+         // 继承方法
+        // 1、原型继承
+        // 优点：通过原型继承多个引用类型的属性和方法
+        // 缺点：Sub原型变成了Super的实例，如果Super的实例某个属性是引用值，该引用值就会被应用到所有Sub创建的实例中去，会有污染问题。
+        // function Super(){ this.a=1 }
+        // Super.prototype.say = function(){ console.log(‘hhh’) }
+        // function Sub(){}
+        // Sub.prototype = new Super()
+        // const test = new Sub()
+        // console.log( test.say() )
+
+        // function Super(){ this.a=[1,2] }
+        // function Sub(){}
+        // Sub.prototype = new Super()
+        // const test1 = new Sub()
+        // test1.a.push(3)
+        // console.log(test1.a)
+        // const test2 = new Sub()
+        // console.log(test2.a)
+
+        // 2、盗用构造函数
+        // 优点：每个实例都会有自己的a属性，哪怕是引用值也不会被污染
+        // 缺点：Super构造函数中的方法在每个实例上都要创建一遍（除非该方法声明提到全局）；Sub的实例无法访问Super原型上的方法
+        // let Super = function () {
+        //     this.a = 1
+        // }
+        // Super.prototype.c = 3
+        // let Sub = function () {
+        //     console.log(this, 'this');
+        //     Super.call(this)
+        //     this.b = 2
+        // }
+        // const test = new Sub()
+        // console.log(test, 'test');
+
+        // 3.组合继承
+        // 优点：集合了原型继承和盗用构造函数继承的优点
+        // 缺点：存在效率问题，Super始终会被调用两次
+        // function Super() { this.a = [1, 2] }
+        // Super.prototype.say = function () {
+        //     console.log('111');
+        // }
+        // function Sub() {
+        //     Super.call(this)
+        //     this.b = 2
+        // }
+        // Sub.prototype = new Super()
+        // const test1 = new Sub()
+        // console.log(test1.say());
+        // test1.a.push(3)
+        // console.log(test1.a);
+        // const test2 = new Sub()
+        // console.log(test2.a);
+
+        // 4、原型式继承
+        // 优点：对一个对象进行浅克隆创建另一个对象，同时继承该对象的原型属性
+        // 缺点：无法判断实例的构造函数是父类还是子类
+        // es5之前
+        // const obj = { a:1 }
+        // function createObj(o){
+        //     const Fn(){}
+        //     Fn.prototype = o
+        //     return new Fn()
+        // }
+        // const test = createObj(obj)
+        // es5之后
+        // const obj = { a:1 }
+        // const test = Object.create(obj)
+
+        // 5、寄生式继承
+        // 优点：根据一个对象克隆创建另一个对象，并增强对象
+        // 缺点：同【盗用构造函数继承】方法在每个实例上都要创建一遍
+        // 注意：objectCopy不是原生接口，是自定义方法，对入参对象进行复制
+        // function createObj(o) {
+        //     let clone = objectCopy(o)
+        //     clone.say = function () {
+        //         console.log(‘hhh’)
+        //     }
+        //     return clone
+        // }
+        // const obj = { a: 1 }
+        // const test = createObj(obj)
+
+        //6. 寄生式组合继承
+        // 实现：盗用构造函数继承 + 原型式继承
+        // function Super() { this.a = [1, 2] }
+        // Super.prototype.say = function () { console.log(‘hhh’) }
+        // function Sub() {
+        //     Super.call(this)
+        //     this b = 2
+        // }
+        // Sub.prototype = Object.create(Super.prototype)
+        // Sub.prototype.constructor = Sub
+        // const test = new Sub()
+
+        // 原型链和原型,
+        // 显式原型
+        // 1、prototype
+        // 构造函数都有显式原型 在原型上放的就是能够被所有的实例化对象所共享的属性和方法
+
+        ///2、隐式原型
+        //  proto
+        //每一个实例都有隐式原型 指向的就是构造函数的显式原型
+        // constructor
+        // 这个单词本事是构造函数的意思，每一个 prototype 上都有一个 constructor，指向构造函数本身
+
+        // 原型链
+        // 原型对象也可能拥有原型，并从中继承⽅法和属性，⼀层⼀层、以此类推。这种关系常被称为原型链
+        // (prototype chain)，它解释了为何⼀个对象会拥有定义在其他对象中的属性和⽅法
+        // 自己有就用自己的 自己没有就用继承的 最终会找到 Object
+
+
+        // this指向
+        // 1.普通函数内部的this指向调用函数的对象
+        // 2.构造函数 构造函数内部的this指向实例化对象
+        // 3.箭头函数并本身没有this对象, 他内部的this是箭头函数声明时所在的对像，箭头函数本身没有this指向但本身会指向windows
+
+        // 数组方法
+        // let arr=[1,2,3,4]
+        // 1.isArray 检测是否是一个数组
+        // let arr=[1,2,3,4,5,6] //true
+        // let arr=1   //fales
+        // console.log(Array.isArray(arr));
+
+        // 2.push  末尾添加返回的是新数组的长度 会改变原数组
+        // let arr=[1,2]
+        // arr.push(3)
+        // console.log(arr);
+
+        // 3.pop  末尾删除返回的被删除的元素
+        // console.log(arr.pop());
+
+        // 4.shift  头部删除反回的被删除的元素
+        // console.log(arr.shift(1));
+        // console.log(arr);
+
+        // 5.unshift  头部添加 返回的是新数组的长度
+        // console.log(arr.unshift(0));
+        // console.log(arr);
+
+        // 6.slice *slice(start,end).从start开始，end之前结束，不到end。不改变原数组
+        // console.log(arr.slice(1));
+        // console.log(arr);
+
+        // 7.splice 返回删除元素组成对数组，会改变原数组
+        // console.log(arr.splice(1,3));
+        // console.log(arr);
+
+        // 8.toString()  此方法将数组转化为字符串
+        // let str = arr.toString()
+        // console.log(str)
+
+        // 9. sort() 对数组元素进行排序，根据字符串UniCode码排序，原数组改变
+        // 原理
+        // 1. 当返回值为负数时，那么前面的数在前面，也就是不动
+        // 2. 当返回值为正数时，那么后面的数在前**
+        // 3. 为0，不动
+        // let arr = [1,2,4,3]
+        // arr.sort((a,b)=>{
+        //     return a - b;
+        // });
+        // // 降序
+        // arr.sort((a,b)=>{
+        //     return b - a;
+        // })
+
+        // 10.reverse() 将数组倒序。原数组改变
+        // arr.reverse();
+        // console.log(a);
+
+        // 11.concat() 合并两个或多个数组，生成一个新的数组。原数组不变
+        // let arr1 = [1,2];
+        // let b = [3,4];
+        // let result = arr1.concat(b);
+        // console.log(result)
+
+        // 12.join() 将数组的每一项用指定字符连接形成一个字符串。默认连接字符为 “,” 逗号
+        // let arr1 = [1,2,3,4];
+        // let str = arr1.join();
+        // let str1 = arr1.join('-');
+        // console.log(str);
+        // console.log(str1);
+
+        // 13.indexOf() 来查找某个元素的位置，如果不存在就返回-1，但是不能判断是否有NaN的元素
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.indexOf('项目二');
+        // console.log(arr1);
+
+        // 14.includes() 判断是否包含某一元素,直接返回true或者false表示是否包含元素，对NaN一样有效
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.includes('项目一');
+        // console.log(result) // true
+
+        // 15.map()  数组循环 返回的是一个新数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // let resultArr = testArr.map((item, index) => {
+        //   return `处理·${item}`
+        // });
+        // console.log(resultArr);
+
+        // 16.forEach()  对数组的每个元素执行一次提供的函数,总是返回undefined,不改变原数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // testArr.forEach((item, index)=>{
+        //   return `forEach处理${item}`
+        // });
+
+        // 17.filter() 对数组的每一项都进行过滤,返回符合条件的item组成的数组,不会改变原数组
+        // let filterArr = ['子项0','子项1','子项2'];
+        // let filterResult = filterArr.filter((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(filterArr);
+        // console.log(filterResult);  ["子项0"]
+
+        // 18.find() 遍历数组,找到第一个符合条件的项,并返回该项,否则返回undefined不会改变数组
+        // let findArr = ['子项0','子项1','子项2']
+        // let findResult = findArr.find((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(findResult);
+
+        // 19.findIndex() 遍历数组找到第一个符合条件的项，并返回该项的索引值。否则返回-1,不会改变数组对象
+        // let findIndexArr = ['子项0','子项1','子项2'];
+        // let findIndexResult = findIndexArr.findIndex((item, index)=>{
+        //   return item === '子项3';
+        // });
+        // console.log(findIndexResult);
+
+        // 20.every() 对数组中的每一项运行给定函数，如果该函数对每一项返回true,则返回true,
+        // 简单说就是看数组的每个元素是否符合要求，都符合则返回true，否则返回false
+        // let everyArr = [2,3,4];
+        // let everyResult = everyArr.every((item, index)=>{
+        //   return item > 0
+        // });
+        // console.log(everyResult);
+
+        // 21.some() 是对数组中每一项运行指定函数，如果该函数对任一项返回true，则返回true。
+        // let someArr = [2,3,4];
+        // let someResult = someArr.some((item, index)=>{
+        //   return item > 3
+        // });
+        // console.log(someResult);
+
+        // 22.reduce() 接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值。
+        // 第二个参数作为第一次调用的a的值
+        // let reduceArr = [0,1,2,3,4]
+        // let reduceResult = reduceArr.reduce((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceResult);
+
+        // 23.reduceRight() 和reduce一样是累加器，不过是从右往左计算,第二个参数作为第一次调用的a的值
+        // let reduceRightArr = [0,1,2,3,4]
+        // let reduceRightResult = reduceRightArr.reduceRight((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceRightResult);
+
+               // let arr=[1,2,3,4]
+        // 1.isArray 检测是否是一个数组
+        // let arr=[1,2,3,4,5,6] //true
+        // let arr=1   //fales
+        // console.log(Array.isArray(arr));
+
+        // 2.push  末尾添加返回的是新数组的长度 会改变原数组
+        // let arr=[1,2]
+        // arr.push(3)
+        // console.log(arr);
+
+        // 3.pop  末尾删除返回的被删除的元素
+        // console.log(arr.pop());
+
+        // 4.shift  头部删除反回的被删除的元素
+        // console.log(arr.shift(1));
+        // console.log(arr);
+
+        // 5.unshift  头部添加 返回的是新数组的长度
+        // console.log(arr.unshift(0));
+        // console.log(arr);
+
+        // 6.slice *slice(start,end).从start开始，end之前结束，不到end。不改变原数组
+        // console.log(arr.slice(1));
+        // console.log(arr);
+
+        // 7.splice 返回删除元素组成对数组，会改变原数组
+        // console.log(arr.splice(1,3));
+        // console.log(arr);
+
+        // 8.toString()  此方法将数组转化为字符串
+        // let str = arr.toString()
+        // console.log(str)
+
+        // 9. sort() 对数组元素进行排序，根据字符串UniCode码排序，原数组改变
+        // 原理
+        // 1. 当返回值为负数时，那么前面的数在前面，也就是不动
+        // 2. 当返回值为正数时，那么后面的数在前**
+        // 3. 为0，不动
+        // let arr = [1,2,4,3]
+        // arr.sort((a,b)=>{
+        //     return a - b;
+        // });
+        // // 降序
+        // arr.sort((a,b)=>{
+        //     return b - a;
+        // })
+
+        // 10.reverse() 将数组倒序。原数组改变
+        // arr.reverse();
+        // console.log(a);
+
+        // 11.concat() 合并两个或多个数组，生成一个新的数组。原数组不变
+        // let arr1 = [1,2];
+        // let b = [3,4];
+        // let result = arr1.concat(b);
+        // console.log(result)
+
+        // 12.join() 将数组的每一项用指定字符连接形成一个字符串。默认连接字符为 “,” 逗号
+        // let arr1 = [1,2,3,4];
+        // let str = arr1.join();
+        // let str1 = arr1.join('-');
+        // console.log(str);
+        // console.log(str1);
+
+        // 13.indexOf() 来查找某个元素的位置，如果不存在就返回-1，但是不能判断是否有NaN的元素
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.indexOf('项目二');
+        // console.log(arr1);
+
+        // 14.includes() 判断是否包含某一元素,直接返回true或者false表示是否包含元素，对NaN一样有效
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.includes('项目一');
+        // console.log(result) // true
+
+        // 15.map()  数组循环 返回的是一个新数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // let resultArr = testArr.map((item, index) => {
+        //   return `处理·${item}`
+        // });
+        // console.log(resultArr);
+
+        // 16.forEach()  对数组的每个元素执行一次提供的函数,总是返回undefined,不改变原数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // testArr.forEach((item, index)=>{
+        //   return `forEach处理${item}`
+        // });
+
+        // 17.filter() 对数组的每一项都进行过滤,返回符合条件的item组成的数组,不会改变原数组
+        // let filterArr = ['子项0','子项1','子项2'];
+        // let filterResult = filterArr.filter((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(filterArr);
+        // console.log(filterResult);  ["子项0"]
+
+        // 18.find() 遍历数组,找到第一个符合条件的项,并返回该项,否则返回undefined不会改变数组
+        // let findArr = ['子项0','子项1','子项2']
+        // let findResult = findArr.find((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(findResult);
+
+        // 19.findIndex() 遍历数组找到第一个符合条件的项，并返回该项的索引值。否则返回-1,不会改变数组对象
+        // let findIndexArr = ['子项0','子项1','子项2'];
+        // let findIndexResult = findIndexArr.findIndex((item, index)=>{
+        //   return item === '子项3';
+        // });
+        // console.log(findIndexResult);
+
+        // 20.every() 对数组中的每一项运行给定函数，如果该函数对每一项返回true,则返回true,
+        // 简单说就是看数组的每个元素是否符合要求，都符合则返回true，否则返回false
+        // let everyArr = [2,3,4];
+        // let everyResult = everyArr.every((item, index)=>{
+        //   return item > 0
+        // });
+        // console.log(everyResult);
+
+        // 21.some() 是对数组中每一项运行指定函数，如果该函数对任一项返回true，则返回true。
+        // let someArr = [2,3,4];
+        // let someResult = someArr.some((item, index)=>{
+        //   return item > 3
+        // });
+        // console.log(someResult);
+
+        // 22.reduce() 接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值。
+        // 第二个参数作为第一次调用的a的值
+        // let reduceArr = [0,1,2,3,4]
+        // let reduceResult = reduceArr.reduce((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceResult);
+
+        // 23.reduceRight() 和reduce一样是累加器，不过是从右往左计算,第二个参数作为第一次调用的a的值
+        // let reduceRightArr = [0,1,2,3,4]
+        // let reduceRightResult = reduceRightArr.reduceRight((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceRightResult);
+
+               // let arr=[1,2,3,4]
+        // 1.isArray 检测是否是一个数组
+        // let arr=[1,2,3,4,5,6] //true
+        // let arr=1   //fales
+        // console.log(Array.isArray(arr));
+
+        // 2.push  末尾添加返回的是新数组的长度 会改变原数组
+        // let arr=[1,2]
+        // arr.push(3)
+        // console.log(arr);
+
+        // 3.pop  末尾删除返回的被删除的元素
+        // console.log(arr.pop());
+
+        // 4.shift  头部删除反回的被删除的元素
+        // console.log(arr.shift(1));
+        // console.log(arr);
+
+        // 5.unshift  头部添加 返回的是新数组的长度
+        // console.log(arr.unshift(0));
+        // console.log(arr);
+
+        // 6.slice *slice(start,end).从start开始，end之前结束，不到end。不改变原数组
+        // console.log(arr.slice(1));
+        // console.log(arr);
+
+        // 7.splice 返回删除元素组成对数组，会改变原数组
+        // console.log(arr.splice(1,3));
+        // console.log(arr);
+
+        // 8.toString()  此方法将数组转化为字符串
+        // let str = arr.toString()
+        // console.log(str)
+
+        // 9. sort() 对数组元素进行排序，根据字符串UniCode码排序，原数组改变
+        // 原理
+        // 1. 当返回值为负数时，那么前面的数在前面，也就是不动
+        // 2. 当返回值为正数时，那么后面的数在前**
+        // 3. 为0，不动
+        // let arr = [1,2,4,3]
+        // arr.sort((a,b)=>{
+        //     return a - b;
+        // });
+        // // 降序
+        // arr.sort((a,b)=>{
+        //     return b - a;
+        // })
+
+        // 10.reverse() 将数组倒序。原数组改变
+        // arr.reverse();
+        // console.log(a);
+
+        // 11.concat() 合并两个或多个数组，生成一个新的数组。原数组不变
+        // let arr1 = [1,2];
+        // let b = [3,4];
+        // let result = arr1.concat(b);
+        // console.log(result)
+
+        // 12.join() 将数组的每一项用指定字符连接形成一个字符串。默认连接字符为 “,” 逗号
+        // let arr1 = [1,2,3,4];
+        // let str = arr1.join();
+        // let str1 = arr1.join('-');
+        // console.log(str);
+        // console.log(str1);
+
+        // 13.indexOf() 来查找某个元素的位置，如果不存在就返回-1，但是不能判断是否有NaN的元素
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.indexOf('项目二');
+        // console.log(arr1);
+
+        // 14.includes() 判断是否包含某一元素,直接返回true或者false表示是否包含元素，对NaN一样有效
+        // let arr1 = ['项目一','项目二','项目三'];
+        // let result = arr1.includes('项目一');
+        // console.log(result) // true
+
+        // 15.map()  数组循环 返回的是一个新数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // let resultArr = testArr.map((item, index) => {
+        //   return `处理·${item}`
+        // });
+        // console.log(resultArr);
+
+        // 16.forEach()  对数组的每个元素执行一次提供的函数,总是返回undefined,不改变原数组
+        // let testArr = ['子项0','子项1','子项2'];
+        // testArr.forEach((item, index)=>{
+        //   return `forEach处理${item}`
+        // });
+
+        // 17.filter() 对数组的每一项都进行过滤,返回符合条件的item组成的数组,不会改变原数组
+        // let filterArr = ['子项0','子项1','子项2'];
+        // let filterResult = filterArr.filter((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(filterArr);
+        // console.log(filterResult);  ["子项0"]
+
+        // 18.find() 遍历数组,找到第一个符合条件的项,并返回该项,否则返回undefined不会改变数组
+        // let findArr = ['子项0','子项1','子项2']
+        // let findResult = findArr.find((item, index) => {
+        //   return item === '子项0';
+        // });
+        // console.log(findResult);
+
+        // 19.findIndex() 遍历数组找到第一个符合条件的项，并返回该项的索引值。否则返回-1,不会改变数组对象
+        // let findIndexArr = ['子项0','子项1','子项2'];
+        // let findIndexResult = findIndexArr.findIndex((item, index)=>{
+        //   return item === '子项3';
+        // });
+        // console.log(findIndexResult);
+
+        // 20.every() 对数组中的每一项运行给定函数，如果该函数对每一项返回true,则返回true,
+        // 简单说就是看数组的每个元素是否符合要求，都符合则返回true，否则返回false
+        // let everyArr = [2,3,4];
+        // let everyResult = everyArr.every((item, index)=>{
+        //   return item > 0
+        // });
+        // console.log(everyResult);
+
+        // 21.some() 是对数组中每一项运行指定函数，如果该函数对任一项返回true，则返回true。
+        // let someArr = [2,3,4];
+        // let someResult = someArr.some((item, index)=>{
+        //   return item > 3
+        // });
+        // console.log(someResult);
+
+        // 22.reduce() 接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值。
+        // 第二个参数作为第一次调用的a的值
+        // let reduceArr = [0,1,2,3,4]
+        // let reduceResult = reduceArr.reduce((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceResult);
+
+        // 23.reduceRight() 和reduce一样是累加器，不过是从右往左计算,第二个参数作为第一次调用的a的值
+        // let reduceRightArr = [0,1,2,3,4]
+        // let reduceRightResult = reduceRightArr.reduceRight((a, b)=>{
+        //   return a + b;
+        // });
+        // console.log(reduceRightResult);
+
+       
+
+        // 闭包
+        // function fun() {
+        //     var num = 0;
+        //     return function () {
+        //         num++
+        //         console.log(num)
+        //         return num
+        //     }
+        // }
+        // var result = fun()
+        // var num1 = result() // 1
+        // console.log(num1);
+        // var num2 = result() // 2
+        // console.log(num2);
+        // 作用
+        // 1、可以打通不同作用域之间的连接 然外部作用域可以访问到内部的变量或者方法
+        // 2、 闭包的变量一直处于引用的状态 所以变量不会销毁
+        // 3、 避免使用全局变量导致的全局变量污染
+        // 4、 比局部变量使用起来更灵活
+        // 缺点
+        // 因为闭包不会销毁变量 所以会造成内存泄漏 也就是说当闭包的变量过多时会导致内存占用过大从而导致运行速度变慢
+
+    </script>
+</body>
+
+</html>
