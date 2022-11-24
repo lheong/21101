@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Set.prototype.keys()返回Set实例对象的键名遍历器。但由于Set没有键名，只有键值，
+        // 故keys()方法和Set.prototype.values()方法的返回值是一致的，也可以理解成keys()
+        // 方法是values()方法的别名(出于与 Map 对象保持相似的原因)，返回的都是键值。
+        // var set = new Set([1, 2, 3, 3, 4, 4, 5, 5, 5]);
+        // set; // {1, 2, 3, 4, 5}
+        // var iter = set.keys();
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next())
+
+
+        // Set.prototype.values()方法返回一个键值的遍历器。这个对象以插入Set 对象的顺序包含了原 Set 对象里的每个元素。
+        // var set = new Set([1, 2, 3, 3, 4, 4, 5, 5, 5]);
+        // set; // {1, 2, 3, 4, 5}
+        // var iter = set.values();
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next());
+
+        // Set.prototype.entries()方法返回一个键值对的遍历器。由于Set对象实例没有键名，故返回的迭代器的每一项的值都是两个相同值组成的数组。
+        // var set = new Set('abcde');
+        // set; // {"a", "b", "c", "d", "e"}
+        // var iter = set.entries();
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next());
+
+        // Set.prototype.forEach()方法根据集合中元素的顺序，对每个元素都执行提供的回调函数一次，该方法没有返回值。
+        // var set = new Set('photoshop');
+        // set.forEach(function (value, key) {
+        //     console.log("value:", value, "key:", key);
+        // });
+    </script>
+</body>
+
+</html>

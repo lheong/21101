@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // catch
+        // let p1 = new Promise((resolve, reject) => {
+        //     reject('失败 1')
+        // })
+
+        // let p2 = new Promise((resolve, reject) => {
+        //     reject('失败 2')
+        // })
+
+        // let p3 = new Promise((resolve, reject) => {
+        //     reject('失败 3')
+        // })
+
+        // p1.then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
+        //     .then((data) => {
+        //         let result = p2.then(res => res)
+        //         console.log(result);
+        //     }).catch((err) => {
+        //         console.log(err)
+        //     })
+        //     .then((data1) => {
+        //         console.log(data1);
+        //         p3.then(res => {
+        //             console.log(res);
+        //         })
+        //     }).catch((err) => {
+        //         console.log(err)
+        //     });
+    </script>
+    <script>
+        // let p1 = new Promise((resolve, reject) => {
+        //     reject('1')
+        // })
+
+        // let p2 = new Promise((resolve, reject) => {
+        //     reject('2')
+        // })
+
+        // let p3 = new Promise((resolve, reject) => {
+        //     reject('3')
+        // })
+
+        // p1.then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
+        //     .then((data) => {
+        //         let result = p2.then(res => res)
+        //         console.log(result);
+        //     }).catch((err) => {
+        //         console.log(err)
+        //     })
+        //     .then((data1) => {
+        //         console.log(data1);
+        //         p3.then(res => {
+        //             console.log(res);
+        //         })
+        //     }).catch((err) => {
+        //         console.log(err)
+        //     });
+    </script>
+    <script>
+    // let p1 = new Promise((resolve, reject) => {
+    //     reject('1')
+    // })
+
+    // let p2 = new Promise((resolve, reject) => {
+    //     reject('2')
+    // })
+
+    // let p3 = new Promise((resolve, reject) => {
+    //     reject('3')
+    // })
+
+    // p1.then((res) => {
+    //     console.log(res);
+    // }).catch((err) => {
+    //     console.log(err)
+    // })
+    //     .then((data) => {
+    //         let result = p2.then(res => res)
+    //         console.log(result);
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
+    //     .then((data1) => {
+    //         console.log(data1);
+    //         p3.then(res => {
+    //             console.log(res);
+    //         })
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     });
+    </script>
+
+
+
+
+
+    <script>
+        // all
+        // let p1 = new Promise((resolve, reject) => {
+        //     resolve('成功')
+        // })
+
+        // let p2 = new Promise((resolve, reject) => {
+        //     resolve('成功1')
+        // })
+
+        // let p3 = Promise.reject('失败')
+
+        // Promise.all([p1, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+
+        // Promise.all([p1, p3, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+    </script>
+    <script>
+        // let p1 = new Promise((resolve, reject) => {
+        //     resolve('成功')
+        // })
+
+        // let p2 = new Promise((resolve, reject) => {
+        //     resolve('成功1')
+        // })
+
+        // let p3 = Promise.reject('失败')
+
+        // Promise.all([p1, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+
+        // Promise.all([p1, p3, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+    </script>
+    <script>
+        // let p1 = new Promise((resolve, reject) => {
+        //     resolve('成功')
+        // })
+
+        // let p2 = new Promise((resolve, reject) => {
+        //     resolve('成功1')
+        // })
+
+        // let p3 = Promise.reject('失败')
+
+        // Promise.all([p1, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+
+        // Promise.all([p1, p3, p2]).then((result) => {
+        //     console.log(result)
+        // }).catch((error) => {
+        //     console.log(error)
+        // })
+    </script>
+
+
+
+
+    <script>
+        // race
+
+        // const p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(111111)
+        //     }, 600)
+        // })
+        // const p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(222222)
+        //     }, 500)
+        // })
+
+        // const p3 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(333333)
+        //     }, 1000)
+        // })
+
+        // // race 竞技 竞赛
+        // // 只要有一个Promise变成fulilled 状态，那么就结束
+        // Promise.race([p1, p2, p3])
+        //     .then(res => {
+        //         console.log(res);
+        //     }).catch((err) => {
+        //         console.log(err);
+        //     })
+    </script>
+    <script>
+    // const p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(111111)
+    //     }, 600)
+    // })
+    // const p2 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(222222)
+    //     }, 500)
+    // })
+
+    // const p3 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(333333)
+    //     }, 1000)
+    // })
+    // Promise.race([p1, p2, p3])
+    //     .then(res => {
+    //         console.log(res);
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     })
+    </script>
+    <script>
+    // const p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(111111)
+    //     }, 600)
+    // })
+    // const p2 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(222222)
+    //     }, 500)
+    // })
+
+    // const p3 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(333333)
+    //     }, 1000)
+    // })
+
+    // Promise.race([p1, p2, p3])
+    //     .then(res => {
+    //         console.log(res);
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     })
+    </script>
+
+
+
+    <script>
+        // finally
+
+        // function p(){
+        //     return new Promise((resolve,reject)=>{
+        //         resolve('第一组李宏恩')
+        //     })
+        // }
+
+        // p().then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err);
+        // }).finally(() => {
+        //     console.log('lhe');
+        // });
+    </script>
+    <script>
+        // function p(){
+        //     return new Promise((resolve,reject)=>{
+        //         resolve('aaaaa')
+        //     })
+        // }
+
+        // p().then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err);
+        // }).finally(() => {
+        //     console.log('bbbb');
+        // });
+    </script>
+    <script>
+        // function p(){
+        //     return new Promise((resolve,reject)=>{
+        //         resolve('1111')
+        //     })
+        // }
+
+        // p().then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err);
+        // }).finally(() => {
+        //     console.log('2222');
+        // });
+    </script>
+
+
+
+
+    <script>
+        // async await
+
+
+        // function timeout() {
+        //     return 'hello'
+        // }
+        // async function aaa() {
+        //     let res = await timeout()
+        //     console.log(res);
+        // }
+        // aaa()
+
+
+
+        // function fn1(){
+        //     return 10
+        // }
+        // function fn2(num){
+        //     return 10 + num
+        // }
+        // function fn3(num){
+        //     return 10 + num
+        // }
+        // function fn4(num){
+        //     return 10 + num
+        // }
+        // function fn5(num){
+        //     return 10 + num
+        // }
+
+        // async function fn6(){
+        //     let res = await fn1()
+        //     res = await fn2(res)
+        //     res = await fn3(res)
+        //     res = await fn4(res)
+        //     res = await fn5(res)
+        //     console.log(res);
+        // }
+        // fn6()
+
+
+    </script>
+     <script>
+        // function timeout() {
+        //     return 'hello'
+        // }
+        // async function aaa() {
+        //     let res = await timeout()
+        //     console.log(res);
+        // }
+        // aaa()
+        // function fn1(){
+        //     return 10
+        // }
+        // function fn2(num){
+        //     return 10 + num
+        // }
+        // function fn3(num){
+        //     return 10 + num
+        // }
+        // function fn4(num){
+        //     return 10 + num
+        // }
+        // function fn5(num){
+        //     return 10 + num
+        // }
+        // async function fn6(){
+        //     let res = await fn1()
+        //     res = await fn2(res)
+        //     res = await fn3(res)
+        //     res = await fn4(res)
+        //     res = await fn5(res)
+        //     console.log(res);
+        // }
+        // fn6()
+    </script>
+     <script>
+
+        // function timeout() {
+        //     return 'hello'
+        // }
+        // async function aaa() {
+        //     let res = await timeout()
+        //     console.log(res);
+        // }
+        // aaa()
+
+        // function fn1(){
+        //     return 10
+        // }
+        // function fn2(num){
+        //     return 10 + num
+        // }
+        // function fn3(num){
+        //     return 10 + num
+        // }
+        // function fn4(num){
+        //     return 10 + num
+        // }
+        // function fn5(num){
+        //     return 10 + num
+        // }
+        // async function fn6(){
+        //     let res = await fn1()
+        //     res = await fn2(res)
+        //     res = await fn3(res)
+        //     res = await fn4(res)
+        //     res = await fn5(res)
+        //     console.log(res);
+        // }
+        // fn6()
+    </script>
+
+
+
+
+    <script>
+        // let aaa = '1111'
+        // let bbb = '2222'
+        // let ccc = '3333'
+        // function getOne() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(aaa)
+        //         })
+        //     })
+        // }
+        // async function getTwo() {
+        //     console.log('1234');
+        //     let result = await getOne()
+        //     console.log(result);
+        // }
+        // getTwo()
+
+    </script>
+     <script>
+        // let aaa = '1111'
+        // let bbb = '2222'
+        // let ccc = '3333'
+        // function getOne() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(aaa)
+        //         })
+        //     })
+        // }
+        // async function getTwo() {
+        //     console.log('1234');
+        //     let result = await getOne()
+        //     console.log(result);
+        // }
+        // getTwo()
+
+    </script>
+     <script>
+        // let aaa = '1111'
+        // let bbb = '2222'
+        // let ccc = '3333'
+        // function getOne() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(aaa)
+        //         })
+        //     })
+        // }
+        // async function getTwo() {
+        //     console.log('1234');
+        //     let result = await getOne()
+        //     console.log(result);
+        // }
+        // getTwo()
+
+    </script>
+
+
+
+
+    <script>
+        // Map
+
+        // // 声明一个map函数
+        // const map = new Map()
+
+        // // // set一个属性
+        // map.set('name', '小蓝')
+        // console.log(map);
+
+        // // // 如何set一个方法
+        // map.set('change', function () {
+        //     console.log('hhhhhhh');
+        // })
+        // console.log(map);
+
+        // let key = {
+        //     num: '1234'
+        // }
+        // map.set(key, ['1', '2', '3', '4'])
+        // console.log(map);
+
+        // // // 删除期中一个key
+        // map.delete('name')
+        // console.log(map);
+
+        // // 判断当前的键是否存在map中
+        // console.log(map.has(key));
+
+        // // 获取一个map
+        // console.log(map.get(key));
+
+        // // 判断长度
+        // console.log(map.size);
+
+        // // 遍历
+        // for (let key of map) {
+        //     console.log(key);
+        // }
+
+        // // 清空
+        // map.clear()
+        // console.log(map);
+    </script>
+     <script>
+        // Map
+
+        // // 声明一个map函数
+        // const map = new Map()
+
+        // // // set一个属性
+        // map.set('name', '小蓝')
+        // console.log(map);
+
+        // // // 如何set一个方法
+        // map.set('change', function () {
+        //     console.log('hhhhhhh');
+        // })
+        // console.log(map);
+
+        // let key = {
+        //     num: '1234'
+        // }
+        // map.set(key, ['1', '2', '3', '4'])
+        // console.log(map);
+
+        // // // 删除期中一个key
+        // map.delete('name')
+        // console.log(map);
+
+        // // 判断当前的键是否存在map中
+        // console.log(map.has(key));
+
+        // // 获取一个map
+        // console.log(map.get(key));
+
+        // // 判断长度
+        // console.log(map.size);
+
+        // // 遍历
+        // for (let key of map) {
+        //     console.log(key);
+        // }
+
+        // // 清空
+        // map.clear()
+        // console.log(map);
+    </script>
+     <script>
+        // Map
+
+        // // 声明一个map函数
+        // const map = new Map()
+
+        // // // set一个属性
+        // map.set('name', '小蓝')
+        // console.log(map);
+
+        // // // 如何set一个方法
+        // map.set('change', function () {
+        //     console.log('hhhhhhh');
+        // })
+        // console.log(map);
+
+        // let key = {
+        //     num: '1234'
+        // }
+        // map.set(key, ['1', '2', '3', '4'])
+        // console.log(map);
+
+        // // // 删除期中一个key
+        // map.delete('name')
+        // console.log(map);
+
+        // // 判断当前的键是否存在map中
+        // console.log(map.has(key));
+
+        // // 获取一个map
+        // console.log(map.get(key));
+
+        // // 判断长度
+        // console.log(map.size);
+
+        // // 遍历
+        // for (let key of map) {
+        //     console.log(key);
+        // }
+
+        // // 清空
+        // map.clear()
+        // console.log(map);
+    </script>
+
+
+
+
+
+    <script>
+        // Set
+        // // 新建一个set数组
+        // const set = new Set()
+
+        // // 添加元素
+        // set.add('1')
+        // set.add('2')
+        // set.add('3')
+        // set.add('4')
+        // console.log(set);
+
+        // // 删除
+        // console.log(set.delete('1'));
+
+        // // 检测是否存在这个值
+        // console.log(set.has('2'));
+
+        // // 循环遍历
+        // for (let key of set) {
+        //     console.log(key);
+        // }
+
+        // // 获取长度
+        // console.log(set.size);
+
+        // // 去重
+        // let aaa = [1, 2, 2, 2, 2, 3, 4, 4, 4, 4, 5,]
+        // let sun = new Set(aaa)
+        // console.log(sun);
+
+        // // 变数组
+        // let b = [...sun]
+        // console.log(b);
+
+        // let c = Array.from(sun)
+        // console.log(c);
+
+
+    </script>
+    <script>
+        // Set
+        // // 新建一个set数组
+        // const set = new Set()
+
+        // // 添加元素
+        // set.add('1')
+        // set.add('2')
+        // set.add('3')
+        // set.add('4')
+        // console.log(set);
+
+        // // 删除
+        // console.log(set.delete('1'));
+
+        // // 检测是否存在这个值
+        // console.log(set.has('2'));
+
+        // // 循环遍历
+        // for (let key of set) {
+        //     console.log(key);
+        // }
+
+        // // 获取长度
+        // console.log(set.size);
+
+        // // 去重
+        // let aaa = [1, 2, 2, 2, 2, 3, 4, 4, 4, 4, 5,]
+        // let sun = new Set(aaa)
+        // console.log(sun);
+
+        // // 变数组
+        // let b = [...sun]
+        // console.log(b);
+
+        // let c = Array.from(sun)
+        // console.log(c);
+
+
+    </script>
+    <script>
+        // Set
+        // // 新建一个set数组
+        // const set = new Set()
+
+        // // 添加元素
+        // set.add('1')
+        // set.add('2')
+        // set.add('3')
+        // set.add('4')
+        // console.log(set);
+
+        // // 删除
+        // console.log(set.delete('1'));
+
+        // // 检测是否存在这个值
+        // console.log(set.has('2'));
+
+        // // 循环遍历
+        // for (let key of set) {
+        //     console.log(key);
+        // }
+
+        // // 获取长度
+        // console.log(set.size);
+
+        // // 去重
+        // let aaa = [1, 2, 2, 2, 2, 3, 4, 4, 4, 4, 5,]
+        // let sun = new Set(aaa)
+        // console.log(sun);
+
+        // // 变数组
+        // let b = [...sun]
+        // console.log(b);
+
+        // let c = Array.from(sun)
+        // console.log(c);
+
+
+    </script>
+</body>
+
+</html>
