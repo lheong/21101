@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class 写法
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toString() {
+        //         return '(' + this.x + ',' + this.y + ')'
+        //     }
+        // }
+        // let p =new Point(1,2)
+        // let result= p.toString()
+        // console.log(result);
+        // console.log(p.toString());
+
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toString() {
+        //         return '(' + this.x + ',' + this.y + ')'
+        //     }
+        // }
+        // let p = new Point(1, 2)
+        // let result = p.toString()
+        // console.log(result);
+        // console.log(p);
+
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toStoring() {
+        //         return '(' + this.x + ',' + this.y + ')'
+        //     }
+        // }
+        // let p=new Point(1,2)
+        // let result = p.toStoring()
+        // console.log(p);
+        // console.log(result);
+
+
+
+
+
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('qqqq');
+        // }
+        // Phone.prototype.info = function () {
+        //     return '(wwww' + this.brand + ',rrrrr' + this.price + 'ttttt)'
+        // }
+        // let a = new Phone('1111', '222')
+        // console.log(a);
+
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('1111');
+        // }
+        // Phone.prototype.info = function () {
+        //     return '(qqqqq' + this.brand + ',wwwww' + this.price + 'eeeee)'
+        // }
+        // let a = new Phone('333', '444')
+        // console.log(a);
+
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log(1111);
+        // }
+        // Phone.prototype.info = function () {
+        //     return '(qqqq' + this.brand + ',wwww' + this.price + 'eeee)'
+        // }
+        // let a = new Phone('333', '444')
+        // console.log(a);
+
+
+
+
+
+        // class Point {
+        //     constructor(brand, price) {
+        //         this.brand = brand
+        //         this.price = price
+        //     }
+        //     call() {
+        //         console.log('sssss');
+        //     }
+        //     info() {
+        //         return '(oooo' + this.brand + ',llll' + this.price + 'uuuu)'
+        //     }
+        // }
+        // let p = new Point('华为', '5366')
+        // console.log(p.call);
+
+        // class Point {
+        //     constructor(brand, price) {
+        //         this.brand = brand
+        //         this.price = price
+        //     }
+        //     call() {
+        //         console.log('qqqq');
+        //     }
+        //     info() {
+        //         return '(111' + this.brand + ',222' + this.price + '333)'
+        //     }
+        // }
+        // let p = new Point('华为', '53666')
+        // console.log(p);
+
+        // class Phone {
+        //     constructor(brand, price) {
+        //         this.brand = brand
+        //         this.price = price
+        //     }
+        //     call() {
+        //         console.log(111);
+        //     }
+        //     info() {
+        //         return '(11' + this.brand + ',22' + this.price + '33)'
+        //     }
+        // }
+        // let p = new Phone('花花', '❤')
+        // console.log(p);
+    </script>
+
+    <script>
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('我可以打电话');
+        // }
+        // function SmartPhone(brand, price, color, size) {
+        //     Phone.call(this, brand, price)
+        //     this.color = color
+        //     this.size = size
+        // }
+        // SmartPhone.prototype = new Phone
+        // SmartPhone.prototype.constructor = SmartPhone
+        // SmartPhone.prototype.Phone = function () {
+        //     console.log('我可以拍照');
+        // }
+        // SmartPhone.prototype.playGame = function () {
+        //     console.log('我可以玩游戏');
+        // }
+        // let p = new SmartPhone(1, 2, 3, 4)
+        // console.log(p);
+
+         // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('我可以打电话');
+        // }
+        // function SmartPhone(brand, price, color, size) {
+        //     Phone.call(this, brand, price)
+        //     this.color = color
+        //     this.size = size
+        // }
+        // SmartPhone.prototype = new Phone
+        // SmartPhone.prototype.constructor = SmartPhone
+        // SmartPhone.prototype.Phone = function () {
+        //     console.log('我可以拍照');
+        // }
+        // SmartPhone.prototype.playGame = function () {
+        //     console.log('我可以玩游戏');
+        // }
+        // let p = new SmartPhone(1, 2, 3, 4)
+        // console.log(p);
+
+         // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('我可以打电话');
+        // }
+        // function SmartPhone(brand, price, color, size) {
+        //     Phone.call(this, brand, price)
+        //     this.color = color
+        //     this.size = size
+        // }
+        // SmartPhone.prototype = new Phone
+        // SmartPhone.prototype.constructor = SmartPhone
+        // SmartPhone.prototype.Phone = function () {
+        //     console.log('我可以拍照');
+        // }
+        // SmartPhone.prototype.playGame = function () {
+        //     console.log('我可以玩游戏');
+        // }
+        // let p = new SmartPhone(1, 2, 3, 4)
+        // console.log(p);
+
+    </script>
+
+    <script>
+        // function equal(a, b) {
+        //     if (Math.abs(a - b) < Number.EPSILON) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // }
+        // // 二进制和八进制
+        // let b = 0b1010;
+        // let o = 0o777
+
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+        // console.log(x);
+        // console.log(b);
+        // console.log(o);
+
+        // // Number.isFinite 检测一个数值是否为有限数
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100 / 0));
+        // console.log(Number.isFinite(Infinity));
+
+        // // Number.isNaN 检测一个数值是否为 NaN
+        // console.log(Number.isNaN(123));
+
+         // function equal(a, b) {
+        //     if (Math.abs(a - b) < Number.EPSILON) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // }
+        // // 二进制和八进制
+        // let b = 0b1010;
+        // let o = 0o777
+
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+        // console.log(x);
+        // console.log(b);
+        // console.log(o);
+
+        // // Number.isFinite 检测一个数值是否为有限数
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100 / 0));
+        // console.log(Number.isFinite(Infinity));
+
+        // // Number.isNaN 检测一个数值是否为 NaN
+        // console.log(Number.isNaN(123));
+         // function equal(a, b) {
+        //     if (Math.abs(a - b) < Number.EPSILON) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // }
+        // // 二进制和八进制
+        // let b = 0b1010;
+        // let o = 0o777
+
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+        // console.log(x);
+        // console.log(b);
+        // console.log(o);
+
+        // // Number.isFinite 检测一个数值是否为有限数
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100 / 0));
+        // console.log(Number.isFinite(Infinity));
+
+        // // Number.isNaN 检测一个数值是否为 NaN
+        // console.log(Number.isNaN(123));
+
+
+        // const proto = {
+        //     foo: 'hello'
+        // }
+        // const obj = {
+        //     fooL: 'world',
+        //     find() {
+        //         return super.foo
+        //     }
+        // }
+
+        // Object.setPrototypeOf(obj, proto)
+        // console.log(obj.find());
+        // obj.find()
+
+        // const proto = {
+        //     foo: 'hello'
+        // }
+        // const obj = {
+        //     fooL: 'world',
+        //     find() {
+        //         return super.foo
+        //     }
+        // }
+
+        // Object.setPrototypeOf(obj, proto)
+        // console.log(obj.find());
+        // obj.find()
+
+        // const proto = {
+        //     foo: 'hello'
+        // }
+        // const obj = {
+        //     fooL: 'world',
+        //     find() {
+        //         return super.foo
+        //     }
+        // }
+
+        // Object.setPrototypeOf(obj, proto)
+        // console.log(obj.find());
+        // obj.find()
+    </script>
+
+    <script>
+        // let obj1 = new Proxy({}, {
+        //     get: function (target, key, receiver) {
+        //         console.log(`获取当前${key}`);
+        //         return Reflect.get(target, key, receiver)
+        //     },
+        //     set: function (target, key, value, receiver) {
+        //         // 需要代理对象 target
+        //         // 设置一个属性名 key
+        //         // 设置属性值  value
+        //         // 代理后的目标对象 receiver
+        //         console.log(`设置当前${key}`);
+        //         return Reflect.set(target, key, value, receiver)
+        //     },
+        // })
+        // obj1.count = 1
+        // ++obj1.count
+        // console.log(obj1);
+
+         // let obj1 = new Proxy({}, {
+        //     get: function (target, key, receiver) {
+        //         console.log(`获取当前${key}`);
+        //         return Reflect.get(target, key, receiver)
+        //     },
+        //     set: function (target, key, value, receiver) {
+        //         // 需要代理对象 target
+        //         // 设置一个属性名 key
+        //         // 设置属性值  value
+        //         // 代理后的目标对象 receiver
+        //         console.log(`设置当前${key}`);
+        //         return Reflect.set(target, key, value, receiver)
+        //     },
+        // })
+        // obj1.count = 1
+        // ++obj1.count
+        // console.log(obj1);
+
+         // let obj1 = new Proxy({}, {
+        //     get: function (target, key, receiver) {
+        //         console.log(`获取当前${key}`);
+        //         return Reflect.get(target, key, receiver)
+        //     },
+        //     set: function (target, key, value, receiver) {
+        //         // 需要代理对象 target
+        //         // 设置一个属性名 key
+        //         // 设置属性值  value
+        //         // 代理后的目标对象 receiver
+        //         console.log(`设置当前${key}`);
+        //         return Reflect.set(target, key, value, receiver)
+        //     },
+        // })
+        // obj1.count = 1
+        // ++obj1.count
+        // console.log(obj1);
+    </script>
+</body>
+
+</html>
