@@ -1,0 +1,13 @@
+{
+	"data": {
+			"id": 508,
+			"rid": "30",
+			"username": "asdf1",
+			"mobile": "123123",
+			"email": "adfsa@qq.com"
+	},
+	"meta": {
+			"msg": "设置角色成功",
+			"status": 200
+	}
+}

@@ -1,0 +1,164 @@
+{
+	"data": [
+			{
+					"id": 30,
+					"roleName": "主管",
+					"roleDesc": "技术负责人",
+					"children": [
+							{
+									"id": 101,
+									"authName": "商品管理",
+									"path": null,
+									"children": [
+											{
+													"id": 104,
+													"authName": "商品列表",
+													"path": null,
+													"children": [
+															{
+																	"id": 105,
+																	"authName": "添加商品",
+																	"path": null
+															}
+													]
+											}
+									]
+							}
+					]
+			},
+			{
+				"id": 303,
+				"roleName": "大堂经理",
+				"roleDesc": "就是大堂经理",
+				"children": [
+						{
+								"id": 1011,
+								"authName": "商品管理",
+								"path": null,
+								"children": [
+										{
+												"id": 1014,
+												"authName": "商品列表",
+												"path": null,
+												"children": [
+														{
+																"id": 1105,
+																"authName": "添加商品",
+																"path": null
+														}
+												]
+										}
+								]
+						}
+				]
+		},
+		{
+			"id": 301,
+			"roleName": "大堂主管",
+			"roleDesc": "就是大堂主管",
+			"children": [
+					{
+							"id": 10111,
+							"authName": "商品管理",
+							"path": null,
+							"children": [
+									{
+											"id": 10411,
+											"authName": "商品列表",
+											"path": null,
+											"children": [
+													{
+															"id": 10511,
+															"authName": "添加商品",
+															"path": null
+													}
+											]
+									}
+							]
+					}
+			]
+	},
+	{
+		"id": 3012,
+		"roleName": "股东",
+		"roleDesc": "就是股东",
+		"children": [
+				{
+						"id": 101112,
+						"authName": "商品管理",
+						"path": null,
+						"children": [
+								{
+										"id": 104121,
+										"authName": "商品列表",
+										"path": null,
+										"children": [
+												{
+														"id": 105121,
+														"authName": "添加商品",
+														"path": null
+												}
+										]
+								}
+						]
+				}
+		]
+},
+{
+	"id": 30122,
+	"roleName": "老板",
+	"roleDesc": "就是老板",
+	"children": [
+			{
+					"id": 1011122,
+					"authName": "商品管理",
+					"path": null,
+					"children": [
+							{
+									"id": 1041212,
+									"authName": "商品列表",
+									"path": null,
+									"children": [
+											{
+													"id": 1025112,
+													"authName": "添加商品",
+													"path": null
+											}
+									]
+							}
+					]
+			}
+	]
+},
+{
+	"id": 3016,
+	"roleName": "经纪人",
+	"roleDesc": "就是经纪人",
+	"children": [
+			{
+					"id": 101116,
+					"authName": "商品管理",
+					"path": null,
+					"children": [
+							{
+									"id": 104116,
+									"authName": "商品列表",
+									"path": null,
+									"children": [
+											{
+													"id": 105116,
+													"authName": "添加商品",
+													"path": null
+											}
+									]
+							}
+					]
+			}
+	]
+}
+	],
+	"meta": {
+			"msg": "获取成功",
+			"status": 200
+	}
+}
