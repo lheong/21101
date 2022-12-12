@@ -1,0 +1,1 @@
+{"data":{"total":7,"pagenum":1,"users":[{"id":500,"role_name":"超级管理员","username":"admin","create_time":1486720211,"mobile":"111111大苏打","email":"1231232132131231231","mg_state":false},{"id":1205,"role_name":"超级管理员","username":"来跟华子","create_time":1670553351,"mobile":"123","email":"1234","mg_state":false}]},"meta":{"msg":"获取管理员列表成功","status":200}}
