@@ -5,7 +5,7 @@ import {
 } from "./auth"
 import router from "vue-router"
 import {
-	MessageBox, 
+	MessageBox,
 } from "element-ui"
 
 const http = axios.create({
@@ -128,6 +128,7 @@ http.send = (url, data = {}, method = "get", contentType = "json") => {
 	return http({
 		method,
 		url: http.addorUrl(url),
+		params: method === 'get' ? data : '',
 		data,
 		headers: {
 			"Content-type": contentType === "json" ? "application/json;charset=utf-8" : "multipart/form-data; boundary=something"

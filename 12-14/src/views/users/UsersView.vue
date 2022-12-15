@@ -10,7 +10,7 @@
         <el-button type="primary" @click="addUsers">添加用户</el-button>
       </el-form-item>
     </el-form>
-    <el-table :data="list" border style="width: 90%">
+    <el-table :data="user" border style="width: 90%">
       <el-table-column type="index" label="#"> </el-table-column>
       <el-table-column prop="username" label="姓名" width="180"> </el-table-column>
       <el-table-column prop="email" label="邮箱" width="180"> </el-table-column>
@@ -32,10 +32,11 @@
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
+      :current-page="params.pagenum"
       :page-sizes="[2, 3, 5, 10]"
-      :page-size="2"
+      :page-size="params.pagesize"
       layout="total, sizes, prev, pager, next, jumper"
-      :total="total"
+      :total="user.length"
     >
     </el-pagination>
 
@@ -54,12 +55,12 @@ export default {
   data() {
     return {
       /**存放数据 */
-      list: [],
-      lists: [],
+      user: [],
+      userdate: [],
       params: {
         query: "",
         pagenum: 1,
-        pagesize: 2
+        pagesize: 5
       },
       /**总条数 */
       total: 0
@@ -71,19 +72,19 @@ export default {
       GetSearchUser(this.params).then((res) => {
         const { data, meta } = res.data
         if (meta.status === 200) {
-          this.list = data.users
+          this.user = data.users
           this.$message.success(meta.msg)
         } else {
           this.$message.error(meta.msg)
         }
       })
     },
-    getlist() {
+    getuser() {
       GetUser(this.params).then((res) => {
         const { data, meta } = res.data
         if (meta.status === 200) {
           this.total = data.total
-          this.list = data.users
+          this.user = data.users
           // this.$message.success(meta.msg)
         } else {
           // this.$message.error(meta.msg)
@@ -97,8 +98,8 @@ export default {
     /**添加 */
     add(obj) {
       SetUser(obj).then(() => {})
-      this.getlist()
-      this.lists.push({ ...obj, id: new Date().getTime() })
+      this.getuser()
+      this.userdate.push({ ...obj, id: new Date().getTime() })
     },
     /**编辑回填 */
     handleEdit(obj) {
@@ -118,8 +119,8 @@ export default {
           })
           /**删除接口 */
           DelUser(id).then(() => {})
-          this.lists = this.lists.filter((item) => item.id != id)
-          this.getlist()
+          this.userdate = this.userdate.filter((item) => item.id != id)
+          this.getuser()
         })
         .catch(() => {
           this.$message({
@@ -131,7 +132,7 @@ export default {
     /**编辑 */
     edit(obj) {
       UpdateUser({ ...obj }).then(() => {})
-      this.lists.forEach((item) => {
+      this.userdate.forEach((item) => {
         if (item.id == obj.id) {
           item.mobile = obj.mobile
           item.email = obj.email
@@ -141,12 +142,12 @@ export default {
     /**每页几条数据 */
     handleSizeChange(val) {
       this.params.pagesize = val
-      this.getlist()
+      this.getuser()
     },
     /**当前第几页 */
     handleCurrentChange(val) {
       this.params.pagenum = val
-      this.getlist()
+      this.getuser()
     },
     /**分配角色 */
     handleAssign(obj) {
@@ -159,7 +160,7 @@ export default {
   },
   created() {
     /**进入页面获取列表 */
-    this.getlist()
+    this.getuser()
   },
   mounted() {},
   components: {
@@ -174,10 +175,10 @@ export default {
         this.id = -1
       }
     },
-    lists: {
+    userdate: {
       deep: true,
       handler(newValue) {
-        this.list = newValue
+        this.user = newValue
       }
     }
   }

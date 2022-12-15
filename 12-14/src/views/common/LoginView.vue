@@ -46,7 +46,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$http.send("/login", this.ruleForm,"post").then((res) => {
+          this.$http.send("/login", this.ruleForm, "post").then((res) => {
             console.log(res)
             /**判断是不是相应成功,和状态码 */
             if (res && res.data.meta.status === 200) {
@@ -60,7 +60,7 @@ export default {
                 type: "success",
                 duration: 2000
               })
-              this.$router.replace("/home")
+              this.$router.replace("/welcome")
             } else {
               /**提示登录失败 */
               this.$notify({
@@ -83,7 +83,9 @@ export default {
 
 <style lang="scss" scoped>
 .login {
-  background-color: #2e3034;
+  // background-color: #2e3034;
+  background-image: url("../../assets/300297.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
