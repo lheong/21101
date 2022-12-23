@@ -1,0 +1,92 @@
+<!--
+ * :Author: Andy
+ * :Date: 2022-11-09 09:29:13
+ * :LastEditTime: 2022-11-09 10:11:04
+ * :Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 引入echarts 文件 -->
+    <!-- 准备一个图表的盒子 -->
+    <!-- 初始化实例对象 -->
+    <!-- 配置项 -->
+    <!-- 将配置项设定给实例对象 -->
+    <div style="width:600px;height:400px;"></div>
+    <script src="./lib/echarts.min.js"></script>
+    <script>
+        var mEcharts = echarts.init(document.querySelector('div'))
+        var xDataArr = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二妞', '大强']
+        var yDataArr = [88, 92, 33, 67, 98, 55, 90, 40]
+        var option = {
+            title: {
+                text: '成绩单',
+
+                textStyle: {
+                    color: "red"
+                },
+                borderWidth: 5,
+                borderColor: 'red',
+                borderRadius: 5,
+                left: 30,
+                top: 10
+            },
+            tooltip: { //图形提示
+                // trigger: 'item',
+                trigger: 'axis',
+                triggerOn: 'click',
+                // formatter: '{b} 的成绩是 {c}分'
+                formatter: function(arg) {
+                    console.log(arg)
+                    let result = "我想我快点好起来"
+                    return `${arg[0].name}的成绩是${arg[0].value}分${result}`
+                }
+            },
+            xAxis: {
+                type: 'category', //类目轴
+                data: xDataArr
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: '语文成绩',
+                type: 'bar',
+                data: yDataArr,
+                markPoint: {
+                    //标点
+                    data: [{
+                        type: 'max',
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        name: '最小值'
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: "average",
+                        name: '平均值'
+                    }]
+                },
+                label: {
+                    show: true,
+                    rotate: 60,
+                    position: 'top'
+                },
+                barWidth: '30%'
+            }]
+        }
+        mEcharts.setOption(option)
+    </script>
+</body>
+
+</html>

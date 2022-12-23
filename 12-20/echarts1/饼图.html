@@ -1,0 +1,66 @@
+<!--
+ * :Author: Andy
+ * :Date: 2022-11-09 09:29:13
+ * :LastEditTime: 2022-11-10 15:06:31
+ * :Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 引入echarts 文件 -->
+    <!-- 准备一个图表的盒子 -->
+    <!-- 初始化实例对象 -->
+    <!-- 配置项 -->
+    <!-- 将配置项设定给实例对象 -->
+    <div style="width:600px;height:400px;"></div>
+    <script src="./lib/echarts.min.js"></script>
+    <script>
+        var mEcharts = echarts.init(document.querySelector('div'))
+        var pieData = [{
+            name: '淘宝',
+            value: 1000
+        }, {
+            name: '京东',
+            value: 200
+        }, {
+            name: '1号店',
+            value: 190
+        }, {
+            name: '拼多多',
+            value: 300
+        }, {
+            name: '得物',
+            value: 3000
+        }]
+        var option = {
+
+            series: [{
+                type: 'pie',
+                data: pieData,
+                label: {
+                    // formatter: 'hehe'
+                    formatter: function(arg) {
+                        console.log(arg)
+                    }
+                },
+                //radius: 20
+                //radius: '20%'
+                //  radius: ['50%', '75%']
+                //roseType: 'radius'
+                selectedMode: 'multiple',
+                selectedOffset: 30
+            }]
+        }
+        mEcharts.setOption(option)
+    </script>
+</body>
+
+</html>
