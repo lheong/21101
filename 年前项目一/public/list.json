@@ -1,0 +1,89 @@
+[{
+    "id": "1",
+    "name": "SAAS企业管理",
+    "type": 1,
+    "code": "saas-clients",
+    "description": "",
+    "pid": "0",
+    "enVisible": "0"
+}, {
+    "id": "1063315016368918528",
+    "name": "员工管理",
+    "type": 1,
+    "code": "employees",
+    "description": "用户管理菜单",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1063327833876729856",
+    "name": "组织架构",
+    "type": 1,
+    "code": "departments",
+    "description": "组织架构菜单",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1063328114689576960",
+    "name": "公司设置",
+    "type": 1,
+    "code": "settings",
+    "description": "公司设置菜单",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1064104257952813056",
+    "name": "权限管理",
+    "type": 1,
+    "code": "permissions",
+    "description": "权限菜单",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1146308691438043136",
+    "name": "社保",
+    "type": 1,
+    "code": "social_securitys",
+    "description": "社保菜单",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1151424682926747648",
+    "name": "考勤",
+    "type": 1,
+    "code": "attendances",
+    "description": "考勤",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1151747519034093568",
+    "name": "工资",
+    "type": 1,
+    "code": "salarys",
+    "description": "工资模块",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1156085524669272064",
+    "name": "员工自助",
+    "type": 1,
+    "code": "user12345",
+    "description": "员工自助",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1172702828368498688",
+    "name": "审批",
+    "type": 1,
+    "code": "approvals",
+    "description": "审批",
+    "pid": "0",
+    "enVisible": "1"
+}, {
+    "id": "1610963136628785152",
+    "name": "123",
+    "type": 1,
+    "code": "123",
+    "description": "123",
+    "pid": "0",
+    "enVisible": "1"
+}]
